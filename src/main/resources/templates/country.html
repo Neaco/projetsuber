@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Insert title here</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+	<div class="container">
+		<h2>Test</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>id</th>
+					<th>Name</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each=" country: ${countryList}">
+					<td th:text="${country.countryId}"></td>
+					<td th:text="${country.countryName}"></td>
+				</tr>
+					
+
+			</tbody>
+		</table>
+
+	</div>
+	
+	<div class="container">
+	
+    	<p th:text="'Ceci est un  ' + ${test} + '!'" />
+		
+	</div>
+</body>
+</html>
